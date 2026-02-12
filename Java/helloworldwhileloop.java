@@ -5,5 +5,6 @@ public class helloworldwhileloop {
             System.out.println(i+" Hello World !");
             i++;
         }
+        System.out.println("printed Hello Worl ! " +i+" times");
     }
 }
