@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #acc8af;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            color: #4b3fa7;
+            margin-top: 30px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .contact-container {
+            width: 90%;
+            max-width: 400px;
+            margin: 40px auto;
+            background-color: rgb(155, 147, 248);
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(80, 80, 120, 0.1);
+            padding: 32px 24px 24px 24px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            border-radius: 8px;
+            margin-bottom: 1px;
+            width: 100%;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #f7f7ff;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin-right: 6px;
+        }
+        label {
+            margin-right: 18px;
+            font-size: 1rem;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            margin-top: 14px;
+            padding: 10px 32px;
+            background: #4b3fa7;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #362e7a;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 500px) {
+            .contact-container {
+                padding: 16px 6px 16px 6px;
+            }
+            input[type="text"],
+            input[type="email"],
+            input[type="number"],
+            textarea {
+                width: 98%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Contact me</h1>
+    <div class="contact-container">
+        <form>
+            <img src="https://img.freepik.com/free-psd/contact-us-label-illustration_23-2151600822.jpg?semt=ais_user_personalization&w=740&q=80"
+            alt="contact" width="180px">
+            <input type="text" placeholder="Enter name" name="name" required>
+            <input type="email" placeholder="Enter your email" name="email" required>
+            <input type="number" pattern="[0-9]{10}" maxlength="10" placeholder="Enter mobile no" name="mobile" required>
+            <p style="margin-bottom: 4px; margin-top: 12px;">You are a</p>
+            <div class="radio-group">
+                <label for="student">
+                    <input type="radio" value="student" name="person" id="student" required>Student
+                </label>
+                <label for="teacher">
+                    <input type="radio" value="teacher" name="person" id="teacher">Teacher
+                </label>
+            </div>
+            <textarea name="feedback" placeholder="Write your feedback here..." rows="5" cols="21" required></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
