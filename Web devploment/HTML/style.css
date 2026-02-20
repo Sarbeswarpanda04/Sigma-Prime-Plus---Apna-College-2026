@@ -1,3 +1,14 @@
+body{
+    background-color: rgb(240, 224, 255);
+}
 h1{
-    color:red;
+    color:rgb(23, 72, 24);
+}
+p {
+    color: rgb(16, 75, 20);
+}
+button {
+    font-size: 25px;
+    background-color: rgb(25, 77, 38);
+    color: rgb(255, 251, 246);
 }
