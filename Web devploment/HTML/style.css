@@ -1,14 +1,51 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 body{
     background-color: rgb(240, 224, 255);
 }
-h1{
-    color:rgb(23, 72, 24);
+header{
+    background-color: rgb(25, 77, 38);
+    color: rgb(255, 251, 246);
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
 }
-p {
-    color: rgb(16, 75, 20);
+hero{
+    justify-content: space-around;
+    align-items: center;
+}
+#hero-buttons{
+    display: flex;
+    gap: 20px;
+}
+.myclass{
+    color:rgb(25, 72, 24);
+}
+img{
+    margin: 15px;
+    width: 300px;
+    border: 2px solid rgb(1, 86, 90);
+    border-radius: 25px;
+    box-shadow: 7px 7px 30px rgb(1, 37, 73);
 }
 button {
     font-size: 25px;
     background-color: rgb(25, 77, 38);
     color: rgb(255, 251, 246);
+    border-radius: 10px;
 }
+
+
+/*question 1*/
+#box{
+    background-color: blue;
+    color: white;
+}
+
+/*question 2*/
+.heading{
+    color: red;
+}
+
+/*question 3*/
