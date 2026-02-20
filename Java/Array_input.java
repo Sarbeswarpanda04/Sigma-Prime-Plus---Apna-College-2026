@@ -11,6 +11,8 @@ public class Array_input {
         System.out.print("Enter Marks of Chemistry : ");
         marks[2] = sc.nextInt(); //chem
 
+        System.out.println("Length of Array : "+marks.length);
+
         System.out.println("phy : "+marks[0]);
         System.out.println("Math : "+marks[1]);
         System.out.println("Chemistry : "+marks[2]);
