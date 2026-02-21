@@ -1,5 +1,5 @@
-a = 10
-b = 5
+a = int(input("Enter 1st number : " ))
+b = int(input("Enter 2nd number : " ))
 print("sum = ",a+b)
 print("sub = ",a-b)
 print("mul = ",a*b)
