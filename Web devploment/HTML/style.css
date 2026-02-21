@@ -1,6 +1,6 @@
-*{
+/* *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+} */
 body{
     background-color: rgb(240, 224, 255);
 }
@@ -43,9 +43,12 @@ button {
     color: white;
 }
 
-/*question 2*/
-.heading{
-    color: red;
-}
 
 /*question 3*/
+
+h1{
+    color: green;
+    font-weight: bold;
+    text-align: end;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+}
