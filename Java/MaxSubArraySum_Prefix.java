@@ -2,7 +2,7 @@ public class MaxSubArraySum_Prefix {
     
     public static void MaxSubArraySum_Prefix(int nums[]){
         int currsum =0;
-        int maxSum = Integer.MIN_VALUE;
+        int maxSum = nums[0];
         int prefix[] = new int[nums.length];
         
         prefix[0] = nums[0];
