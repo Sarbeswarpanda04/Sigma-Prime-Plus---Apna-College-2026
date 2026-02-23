@@ -11,7 +11,6 @@ public class MaxSubArraySum_Kadanes {
             maxSum = Math.max(maxSum,currSum);
         }
         System.out.println("Max Sum is : "+maxSum);
-
     }
     public static void main(String[] args) {
         int arr[] ={-2, -3, 4, -1, -2, 1, 5, -3};
