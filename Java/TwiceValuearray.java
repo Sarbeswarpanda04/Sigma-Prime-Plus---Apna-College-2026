@@ -4,15 +4,13 @@
 public class TwiceValuearray {
     public static boolean  TwiceValuearray(int arr[]){
         for(int i=0;i<arr.length;i++){
-            int start = arr[i];
-            for(int j=i+1;j<arr.length;j++){
-                int end = arr[j];
-                if(start==end){
-                    return true;
-                }
+        for(int j=i+1;j<arr.length;j++){
+            if(arr[i] == arr[j]){
+                return true;
             }
         }
-        return false;
+    }
+    return false;
     }
     public static void main(String[] args) {
         int arr[] = {1,2,3,1};
