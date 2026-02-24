@@ -1,20 +1,17 @@
 public class Selection_Sort {
-    public static void Bubble_Sort(int arr[]){
-        for(int turn = 0; turn < arr.length-1; turn++){
-            int swap =0;
-            for(int j = 0; j< arr.length-1-turn; j++){
-                if(arr[j]>arr[j+1]){
-                    swap++;
-                    //swap
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
+    public static void Selection_Sort(int arr[]){
+        for(int i = 0; i < arr.length-1; i++){
+            int min = i;
+            for(int j = i+1; j< arr.length; j++){
+                if(arr[min]>arr[j]){
+                    min = j;
                 }
             }
-            if(swap==0){
-                System.out.println("Array is Already Sorted");
-                break;
-            }
+
+            int temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+
         }
         
     }
@@ -25,9 +22,8 @@ public class Selection_Sort {
         System.out.println();
     }
     public static void main(String[] args) {
-        int arr[] = {1,2,3,4,5};
-        int n = arr.length;
-        Bubble_Sort(arr);
+        int arr[] = {2,3,1,5,4};
+        Selection_Sort(arr);
         PrintArr(arr);
     }
 
