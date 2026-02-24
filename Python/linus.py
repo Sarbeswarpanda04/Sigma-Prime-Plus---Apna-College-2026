@@ -6,16 +6,24 @@ import webbrowser
 import os
 import smtplib
 # first of all we need a speak function
-engine=pyttsx3.init('sapi5')
-
-voices=engine.getProperty('voices')
-print(voices)
-engine.setProperty('voice',voices[1].id)
-newVoiceRate = 175
-engine.setProperty('rate',newVoiceRate)
+engine = None
+try:
+    engine = pyttsx3.init('sapi5')
+    voices = engine.getProperty('voices')
+    print(voices)
+    if voices:
+        voice_index = 1 if len(voices) > 1 else 0
+        engine.setProperty('voice', voices[voice_index].id)
+    newVoiceRate = 175
+    engine.setProperty('rate', newVoiceRate)
+except Exception as e:
+    print(f"TTS init failed: {e}")
 
 #SPEAK---> This function speaks a given audio
 def speak(audio):
+    if engine is None:
+        print(audio)
+        return
     engine.say(audio)
     engine.runAndWait()
 
@@ -40,9 +48,14 @@ def wishMe():
 def takeCommand():
 
     r=sr.Recognizer()
-    with sr.Microphone() as source:
-        print("Listening...")
-        audio=r.listen(source)
+    try:
+        with sr.Microphone() as source:
+            print("Listening...")
+            # Prevent hanging forever
+            audio=r.listen(source, timeout=5, phrase_time_limit=8)
+    except Exception as e:
+        print(f"Microphone error: {e}")
+        return "None"
     try:
         print("Processing....")
         query=r.recognize_google(audio,language="en-in")
@@ -54,11 +67,15 @@ def takeCommand():
 
 # EMAIL FUnCTION
 def sendEmail(to,content):
+    user = os.environ.get('LINUS_EMAIL_USER')
+    password = os.environ.get('LINUS_EMAIL_PASS')
+    if not user or not password:
+        raise RuntimeError("Missing LINUS_EMAIL_USER / LINUS_EMAIL_PASS environment variables")
     server=smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('pratyushnarain55555@gmail.com','penndragon')
-    server.sendmail('pratyushnarain55555@gmail.com',to,content)
+    server.login(user, password)
+    server.sendmail(user, to, content)
     server.close()
 
 # MAIN
@@ -102,8 +119,12 @@ if __name__=="__main__":
         speak("What will be the content?")
         content = takeCommand().lower()
         to = '500060673@stu.upes.ac.in'
-        sendEmail(to, content)
-        speak("Your email has been sent Sir!")
+        try:
+            sendEmail(to, content)
+            speak("Your email has been sent Sir!")
+        except Exception as e:
+            speak("Email failed")
+            print(f"Email error: {e}")
     elif 'shut' in query or 'shut down' in query or 'turn off' in query:
         speak("Do you really want to turn off your machine??")
         speak("Speak yes to proceed and speak No to cancel")
