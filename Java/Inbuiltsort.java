@@ -16,5 +16,5 @@ public class Inbuiltsort {
         int arr[] = {2,5,1,3,4,6};
         Inbuiltsort(arr);
         PrintArr(arr);
-    }
+    }  
 }
