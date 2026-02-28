@@ -32,6 +32,11 @@ public class Twodarray {
             System.out.println();
         }
 
-        search(matrix, 5);
+        //search
+        System.out.print("Enter the number to search: ");
+        int key = sc.nextInt();
+        search(matrix, key);
+        
+        sc.close();
     }
 }
