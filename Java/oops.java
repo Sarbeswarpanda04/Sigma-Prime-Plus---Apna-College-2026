@@ -16,6 +16,10 @@ public class oops {
 
         Student s1 = new Student("Sarbeswar");
         System.out.println(s1.name);
+
+
+        Fish shark = new Fish();
+        shark.eat();
     }
 }
 
@@ -54,5 +58,24 @@ class Student {
     
     Student(String name){
         this.name = name;
+    }
+}
+
+class Animal {
+    String color;
+    void eat(){
+        System.out.println("eats");
+    }
+    void breathe(){
+        System.out.println("Breathes");
+    }
+}
+
+//Derived class
+class Fish extends Animal {
+    int fins;
+
+    void swim(){
+         System.out.println("Swims");
     }
 }
