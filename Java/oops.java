@@ -9,11 +9,21 @@ public class oops {
         System.out.println(p1.tip);
         p1.color = "Yellow";
         System.out.println(p1.color);
+
+        BankAccount myAcc = new BankAccount();
+        myAcc.username = "Sarbeswar";
+        myAcc.setPassword("abcde");
+
     }
 }
 
-class BankStatement {
-    
+class BankAccount {
+    public String username;
+    private String password;
+    public void setPassword(String pwd){
+        password = pwd;
+    }
+
 }
 class  Pen{
      String color;
