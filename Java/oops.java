@@ -30,9 +30,22 @@ public class oops {
         Calculator calc = new Calculator();
         System.out.println(calc.sum(5, 8));
         System.out.println(calc.sum(8.5f, 2.5f));
+
+        Deer d = new Deer();
+        d.eat();
+    }
+}
+class Animal {
+    void eat(){
+        System.out.println("eat Anything");
     }
 }
 
+class Deer extends Animal {
+    void eat(){
+        System.out.println("Eat Grass");
+    }
+}
 class Calculator {
     int sum(int a, int b){
         return a + b;
@@ -44,6 +57,7 @@ class Calculator {
         return a + b + c;
     }
 }
+
 
 // class BankAccount {
 //     public String username;
