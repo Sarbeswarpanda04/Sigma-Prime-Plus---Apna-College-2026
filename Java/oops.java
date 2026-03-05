@@ -14,6 +14,8 @@ public class oops {
         // myAcc.username = "Sarbeswar";
         // myAcc.setPassword("abcde");
 
+        Student s1 = new Student("Sarbeswar");
+        System.out.println(s1.name);
     }
 }
 
@@ -46,12 +48,11 @@ class  Pen{
      }
 }
 
-// class Student {
-//     String name;
-//     int age;
-//     float percentage; //CGPA
-
-//     void calcPercentage(int phy, int chem, int math){
-//         percentage = (phy+chem+math)/3;
-//     }
-// }
+class Student {
+    String name;
+    int role;
+    
+    Student(String name){
+        this.name = name;
+    }
+}
