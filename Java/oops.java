@@ -18,8 +18,9 @@ public class oops {
         System.out.println(s1.name);
 
 
-        // Fish shark = new Fish();
-        // shark.eat();
+        Fish shark = new Fish();
+        shark.eat();
+        shark.swim();
 
         Dog dobby = new Dog();
         dobby.eat();
@@ -66,6 +67,7 @@ class Student {
     }
 }
 
+//Base class
 class Animal {
     String color;
     void eat(){
@@ -78,6 +80,15 @@ class Animal {
 
 class Mammals extends Animal {
     int legs;
+    void walk(){
+        System.out.println("walks");
+    }
+}
+class Fish extends Animal {
+
+    void swim(){
+        System.out.println("swim");
+    }
 }
 
 class Dog extends Mammals{
