@@ -18,8 +18,13 @@ public class oops {
         System.out.println(s1.name);
 
 
-        Fish shark = new Fish();
-        shark.eat();
+        // Fish shark = new Fish();
+        // shark.eat();
+
+        Dog dobby = new Dog();
+        dobby.eat();
+        dobby.legs = 4;
+        System.out.println(dobby.legs);
     }
 }
 
@@ -71,11 +76,19 @@ class Animal {
     }
 }
 
-//Derived class
-class Fish extends Animal {
-    int fins;
-
-    void swim(){
-         System.out.println("Swims");
-    }
+class Mammals extends Animal {
+    int legs;
 }
+
+class Dog extends Mammals{
+String Bread;
+}
+
+//Derived class
+// class Fish extends Animal {
+//     int fins;
+
+//     void swim(){
+//          System.out.println("Swims");
+//     }
+// }
