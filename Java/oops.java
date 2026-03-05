@@ -11,6 +11,10 @@ public class oops {
         System.out.println(p1.color);
     }
 }
+
+class BankStatement {
+    
+}
 class  Pen{
      String color;
      int tip;
