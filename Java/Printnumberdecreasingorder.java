@@ -1,10 +1,10 @@
 public class Printnumberdecreasingorder {
     public static void printDec(int n){
         if(n==1){
-            System.out.println(n);
+            System.out.print(n);
             return;
         }
-        System.out.print(n+" ");
+        System.out.println(n+" ");
         printDec(n-1);
     }
     public static void main(String[] args) {
@@ -13,4 +13,4 @@ public class Printnumberdecreasingorder {
 
     }
 }
-//10 9 8 7 6 5 4 3 2 1
+// 10 9 8 7 6 5 4 3 2 1
