@@ -7,7 +7,7 @@ public class nthfibonaccinumber {
         return fibn;
     }
     public static void main(String[] args) {
-        int n = 7;
+        int n = 5000;
         System.out.println(Fibonacci(n));
     }
 }
