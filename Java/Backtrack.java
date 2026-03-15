@@ -1,6 +1,6 @@
 public class Backtrack {
     public static void changeArr(int arr[], int i, int val){
-        //base class
+        //base case
         if(i==arr.length){
             printArr(arr);
             return;
