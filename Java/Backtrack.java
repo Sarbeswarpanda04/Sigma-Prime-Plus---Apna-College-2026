@@ -1,4 +1,4 @@
-public class Bactrack {
+public class Backtrack {
     public static void changeArr(int arr[], int i, int val){
         //base class
         if(i==arr.length){
@@ -7,8 +7,8 @@ public class Bactrack {
         }
         //recursion
         arr[i] = val;
-        changeArr(arr, i+1, val+1);
-        arr[i] = arr[i]-2;
+        changeArr(arr, i+1, val+1);  //Function call step
+        arr[i] = arr[i]-2;  //Backtracking step
 
     }
     public static void printArr(int arr[]){
