@@ -44,9 +44,12 @@ public class Nqueens {
             for(int j=0;j<board.length;j++){
                 System.out.print(board[i][j]+" ");
             }
-            System.out.println();
+            System.out.println();  
         }
+        count++;
     }
+
+    static int count = 0;
     public static void main(String[] args) {
          int n = 4;
          char board[][]= new char[n][n];
@@ -57,5 +60,6 @@ public class Nqueens {
             }
          }
          nQueen(board,0);
+         System.out.println(count);
     }
 }
