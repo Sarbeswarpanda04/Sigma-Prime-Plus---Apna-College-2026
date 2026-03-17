@@ -22,7 +22,12 @@ public class Arraylist {
         list.remove(2);
         System.out.println(list);
 
-        
+        //Set Element At Index
+        list.set(2, 10);
+        System.out.println(list);
+
+        //
+
 
     }
 }
