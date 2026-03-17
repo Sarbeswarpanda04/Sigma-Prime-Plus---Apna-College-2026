@@ -20,5 +20,6 @@ public class TwodArraylist {
             }
             System.out.println();
         }
+
     }
 }
