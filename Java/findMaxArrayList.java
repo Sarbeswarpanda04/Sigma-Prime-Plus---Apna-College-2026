@@ -12,10 +12,12 @@ public class findMaxArrayList {
 
 
         int Max = Integer.MIN_VALUE;
+
         for(int i=0;i<list.size();i++){
-            if(list.get(i)>=Max){
-                Max = list.get(i);
-            }
+            // if(list.get(i)>=Max){
+            //     Max = list.get(i);
+            // }
+            Max = Math.max(Max, list.get(i));
         }
         System.out.println("Max ellement is : "+Max);
     }
