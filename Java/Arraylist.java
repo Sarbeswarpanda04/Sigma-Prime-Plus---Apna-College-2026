@@ -11,7 +11,9 @@ public class Arraylist {
         list.add(2);
         list.add(3);
         list.add(4);
+        System.out.println(list);
 
+        list.add(1,9);  //Add at spectific index
         System.out.println(list);
 
         //Get Operation
@@ -26,8 +28,9 @@ public class Arraylist {
         list.set(2, 10);
         System.out.println(list);
 
-        //
-
+        //Contains Element
+        System.out.println(list.contains(1));
+        System.out.println(list.contains(12));
 
     }
 }
