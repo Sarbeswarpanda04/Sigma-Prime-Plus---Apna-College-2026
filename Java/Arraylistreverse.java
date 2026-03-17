@@ -10,7 +10,7 @@ public class Arraylistreverse {
 
         System.out.println(list);
 
-        //Reverse
+        //Reverse     Tc- O(n)
         for(int i=list.size()-1;i>=0;i--){
             System.out.print(list.get(i));
         }
