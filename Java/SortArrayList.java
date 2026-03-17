@@ -12,6 +12,8 @@ public class SortArrayList {
         Collections.sort(list);
         System.out.println(list);
 
-
+        //descending order sort
+        Collections.sort(list, Collections.reverseOrder());
+        System.out.println(list);
     }
 }
