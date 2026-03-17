@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Collection;
 public class SortArrayList {
     public static void main(String[] args) {
         ArrayList<Integer> list = new ArrayList<>();
