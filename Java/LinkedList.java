@@ -39,6 +39,25 @@ public class LinkedList {
         tail = newNode;
     }
 
+    public void add(int index, int data){   //add in middle
+        if(index == 0){
+            addFirst(data);
+            return;
+        }
+        Node newNode =  new Node(data);
+        Node temp = head;
+        int i=0;
+
+        while(i< index-1){
+            temp = temp.next;
+            i++;
+        }
+
+        //i = idx-1, temp -> prev
+        newNode.next = temp.next;
+        temp.next = newNode;
+
+    }
     public void print(){
         if(head == null){
             System.out.println("LL is empty");
