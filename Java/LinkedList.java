@@ -123,6 +123,26 @@ public class LinkedList {
         return -1;
     }
 
+    //Search recursively
+    public int helper(Node head,int key){
+        if(head == null){
+            return -1;
+        }
+        if(head.data == key){
+            return 0 ;
+
+        }
+        int index  = helper(head.next, key);
+        if(index == -1){
+            return -1;
+        }
+        return index+1;
+    }
+    public int searchRecursive(int key){
+        return helper(head, key);
+   
+    }
+
 
     public void print(){
         if(head == null){
@@ -161,6 +181,7 @@ public class LinkedList {
         System.out.println(ll.size);
 
         System.out.println(ll.search(3));
+        System.out.println(ll.searchRecursive(5));
 
 
     }
