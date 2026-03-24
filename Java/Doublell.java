@@ -47,11 +47,29 @@ public class Doublell {
 
     }
 
+
+    //Reverse
+    public void reverse(){
+        Node curr = head;
+        Node prev = null;
+        Node next;
+
+        while(curr != null){
+            next = curr.next;
+            curr.next = prev;
+            curr.prev = next;
+
+            prev =  curr;
+            curr = next;
+        }
+        head = prev;
+    }
+
     //print
     public void print(){
         Node temp = head;
         while(temp != null){
-            System.out.println(temp.data + "<->");
+            System.out.print(temp.data + "<->");
             temp = temp.next;
         }
         System.out.println();
@@ -68,5 +86,8 @@ public class Doublell {
         dll.removeFirst();
         dll.print();
         System.out.println(dll.size);
+
+        dll.reverse();
+        dll.print();
     }
 }
