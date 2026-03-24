@@ -10,11 +10,40 @@ public class Doublell {
             this.prev = null;
         } 
     }
-    public static Node 
-    public static 
-    public static
+    public static Node head;
+    public static Node tail;
+    public static int size;
+
+    //add
+    public void addFirst(int data){
+        Node newNode = new Node(data);
+        size++;
+        if(head == null){
+            head = tail = newNode;
+            return;
+        }
+        newNode.next = head;
+        head.prev = newNode;
+        head = newNode;
+    }
+
+    //print
+    public void print(){
+        Node temp = head;
+        while(temp != null){
+            System.out.println(temp.data + "<->");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
 
     public static void main(String[] args) {
-        
+        Doublell dll = new Doublell();
+        dll.addFirst(3);
+        dll.addFirst(2);
+        dll.addFirst(1);
+
+        dll.print();
+        System.out.println(dll.size);
     }
 }
