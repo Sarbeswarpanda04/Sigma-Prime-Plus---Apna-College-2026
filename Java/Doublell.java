@@ -27,6 +27,26 @@ public class Doublell {
         head = newNode;
     }
 
+    //Remove
+    public int removeFirst(){
+        if(head == null){
+            System.out.println(" DLL is Empty");
+            return Integer.MIN_VALUE;
+        }
+        if(size == 1){
+            int val = head.data;
+            head = tail = null;
+            size--;
+            return val;
+        }
+         int val = head.data;
+         head = head.next;
+         head.prev = null;
+         size--;
+         return val;
+
+    }
+
     //print
     public void print(){
         Node temp = head;
@@ -43,6 +63,9 @@ public class Doublell {
         dll.addFirst(2);
         dll.addFirst(1);
 
+        dll.print();
+        System.out.println(dll.size);
+        dll.removeFirst();
         dll.print();
         System.out.println(dll.size);
     }
