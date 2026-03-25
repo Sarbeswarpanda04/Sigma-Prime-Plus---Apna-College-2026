@@ -9,7 +9,8 @@ public class DuplicateParenthesis {
         
         Stack<Character> stack = new Stack<>();
         
-        for (char ch : str.toCharArray()) {
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
             if (ch == ')') {
                 int count = 0;
                 
